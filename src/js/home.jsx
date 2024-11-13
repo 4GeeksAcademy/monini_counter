@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SimpleCounter from "./SimpleCounter";
+import "../styles/index.css";
 
 function Home() {
     const [seconds, setSeconds] = useState(0);
@@ -17,6 +18,8 @@ function Home() {
     const digitTwo = Math.floor((seconds / 10) % 10);
     const digitThree = Math.floor((seconds / 100) % 10);
     const digitFour = Math.floor((seconds / 1000) % 10);
+    const digitFive = Math.floor((seconds / 10000) % 10);
+    const digitSix = Math.floor((seconds / 100000) % 10);
 
     return (
         <div className="container">
@@ -26,6 +29,8 @@ function Home() {
                 digitTwo={digitTwo}
                 digitThree={digitThree}
                 digitFour={digitFour}
+                digitFive={digitFive}
+                digitSix={digitSix}
             />
         </div>
     );
